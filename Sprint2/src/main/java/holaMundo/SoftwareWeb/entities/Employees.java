@@ -3,6 +3,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.ArrayList;
+
 @Getter
 @Setter
 @Data
@@ -13,9 +15,10 @@ public class Employees {
     private long ID;
     private String name;
     private String email;
-    Profile profile;
-    Enum_role role;
-    Enterprises enterprises_employee;
+    private Profile profile;
+    private Enum_role role;
+    private Enterprises enterprises_employee;
+    private ArrayList<Transaction> transactions_Enterprises;
 
     public Employees(long ID, String name, String email, Profile profile, Enum_role role, Enterprises enterprises_employee) {
         this.ID = ID;
