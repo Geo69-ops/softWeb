@@ -13,20 +13,14 @@ import java.util.ArrayList;
 public class Employees {
     @Id
     private long ID;
-    private String name;
-    private String email;
-    private Profile profile;
-    private Enum_role role;
-    private Enterprises enterprises_employee;
+    Profile profile;
+    Enterprises enterprises_employee;
     private ArrayList<Transaction> transactions_Enterprises;
 
-    public Employees(long ID, String name, String email, Profile profile, Enum_role role, Enterprises enterprises_employee) {
+    public Employees(long ID, String name, String email, Profile profile, Enterprises enterprises_employee, ArrayList<Transaction> transactions_Enterprises) {
         this.ID = ID;
-        this.name = name;
-        this.email = email;
         this.profile = profile;
-        this.role = role;
         this.enterprises_employee = enterprises_employee;
+        this.transactions_Enterprises = transactions_Enterprises;
     }
-
 }
